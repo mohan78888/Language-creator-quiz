@@ -1,0 +1,288 @@
+/* ===== COLOR SCHEME OPTIONS ===== */
+
+/* Option 1: Cyberpunk Neon (Current - Green) */
+.cyberpunk-green {
+    --primary: #10b981;
+    --primary-dark: #059669;
+    --secondary: #3b82f6;
+    --accent: #8b5cf6;
+    --warning: #f59e0b;
+    --danger: #ef4444;
+    --success: #10b981;
+    --bg-primary: #0a0a0a;
+    --bg-secondary: #1a1a1a;
+    --text-primary: #10b981;
+    --text-secondary: #6b7280;
+}
+
+/* Option 2: Ocean Blue Theme */
+.ocean-blue {
+    --primary: #06b6d4;
+    --primary-dark: #0891b2;
+    --secondary: #3b82f6;
+    --accent: #8b5cf6;
+    --warning: #f59e0b;
+    --danger: #ef4444;
+    --success: #10b981;
+    --bg-primary: #0c0a1d;
+    --bg-secondary: #1e1b4b;
+    --text-primary: #06b6d4;
+    --text-secondary: #64748b;
+}
+
+/* Option 3: Sunset Orange Theme */
+.sunset-orange {
+    --primary: #f97316;
+    --primary-dark: #ea580c;
+    --secondary: #ec4899;
+    --accent: #8b5cf6;
+    --warning: #f59e0b;
+    --danger: #ef4444;
+    --success: #10b981;
+    --bg-primary: #1c0a0a;
+    --bg-secondary: #2d1b1b;
+    --text-primary: #f97316;
+    --text-secondary: #a1a1aa;
+}
+
+/* Option 4: Purple Galaxy Theme */
+.purple-galaxy {
+    --primary: #a855f7;
+    --primary-dark: #9333ea;
+    --secondary: #ec4899;
+    --accent: #06b6d4;
+    --warning: #f59e0b;
+    --danger: #ef4444;
+    --success: #10b981;
+    --bg-primary: #0f0a1a;
+    --bg-secondary: #1a1a2e;
+    --text-primary: #a855f7;
+    --text-secondary: #71717a;
+}
+
+/* Option 5: Fire Red Theme */
+.fire-red {
+    --primary: #ef4444;
+    --primary-dark: #dc2626;
+    --secondary: #f97316;
+    --accent: #f59e0b;
+    --warning: #eab308;
+    --danger: #dc2626;
+    --success: #10b981;
+    --bg-primary: #1a0a0a;
+    --bg-secondary: #2d1b1b;
+    --text-primary: #ef4444;
+    --text-secondary: #a1a1aa;
+}
+
+/* Option 6: Emerald Forest Theme */
+.emerald-forest {
+    --primary: #10b981;
+    --primary-dark: #059669;
+    --secondary: #059669;
+    --accent: #34d399;
+    --warning: #f59e0b;
+    --danger: #ef4444;
+    --success: #10b981;
+    --bg-primary: #0a1a0a;
+    --bg-secondary: #1a2d1a;
+    --text-primary: #10b981;
+    --text-secondary: #6b7280;
+}
+
+/* Option 7: Golden Sunset Theme */
+.golden-sunset {
+    --primary: #f59e0b;
+    --primary-dark: #d97706;
+    --secondary: #f97316;
+    --accent: #ef4444;
+    --warning: #eab308;
+    --danger: #dc2626;
+    --success: #10b981;
+    --bg-primary: #1a1a0a;
+    --bg-secondary: #2d2d1a;
+    --text-primary: #f59e0b;
+    --text-secondary: #a1a1aa;
+}
+
+/* Option 8: Neon Pink Theme */
+.neon-pink {
+    --primary: #ec4899;
+    --primary-dark: #db2777;
+    --secondary: #f97316;
+    --accent: #8b5cf6;
+    --warning: #f59e0b;
+    --danger: #ef4444;
+    --success: #10b981;
+    --bg-primary: #1a0a1a;
+    --bg-secondary: #2d1a2d;
+    --text-primary: #ec4899;
+    --text-secondary: #a1a1aa;
+}
+
+/* ===== APPLY COLOR SCHEME ===== */
+/* Change this class on the body to switch themes */
+body {
+    --primary: #10b981;
+    --primary-dark: #059669;
+    --secondary: #3b82f6;
+    --accent: #8b5cf6;
+    --warning: #f59e0b;
+    --danger: #ef4444;
+    --success: #10b981;
+    --bg-primary: #0a0a0a;
+    --bg-secondary: #1a1a1a;
+    --text-primary: #10b981;
+    --text-secondary: #6b7280;
+}
+
+/* ===== ENHANCED STYLES ===== */
+body {
+    font-family: 'Courier New', 'Fira Code', monospace;
+    background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+    color: var(--text-primary);
+}
+
+.terminal-bg {
+    background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+    border: 2px solid var(--primary);
+    box-shadow: 
+        0 0 20px rgba(var(--primary-rgb), 0.3),
+        inset 0 0 20px rgba(var(--primary-rgb), 0.1);
+}
+
+.terminal-border {
+    border: 2px solid var(--primary);
+    box-shadow: 
+        0 0 20px rgba(var(--primary-rgb), 0.3),
+        0 0 40px rgba(var(--primary-rgb), 0.1);
+}
+
+.cursor-blink::after {
+    content: '|';
+    animation: blink 1s infinite;
+    color: var(--primary);
+}
+
+.typing-input {
+    caret-color: var(--primary);
+    border-color: var(--primary);
+    background: var(--bg-primary);
+    color: var(--text-primary);
+}
+
+.typing-input:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 10px rgba(var(--accent-rgb), 0.5);
+}
+
+/* Enhanced button styles */
+.btn-primary {
+    background: linear-gradient(45deg, var(--primary), var(--primary-dark));
+    border: 2px solid var(--primary);
+    color: var(--bg-primary);
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(45deg, var(--primary-dark), var(--primary));
+    box-shadow: 0 0 20px rgba(var(--primary-rgb), 0.5);
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background: linear-gradient(45deg, var(--secondary), var(--primary-dark));
+    border: 2px solid var(--secondary);
+    color: var(--bg-primary);
+}
+
+.btn-accent {
+    background: linear-gradient(45deg, var(--accent), var(--primary-dark));
+    border: 2px solid var(--accent);
+    color: var(--bg-primary);
+}
+
+/* Enhanced animations */
+@keyframes glow {
+    0% { 
+        text-shadow: 0 0 5px var(--primary), 0 0 10px var(--primary), 0 0 15px var(--primary);
+        box-shadow: 0 0 5px rgba(var(--primary-rgb), 0.5);
+    }
+    100% { 
+        text-shadow: 0 0 10px var(--primary), 0 0 20px var(--primary), 0 0 30px var(--primary);
+        box-shadow: 0 0 10px rgba(var(--primary-rgb), 0.8);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+}
+
+/* Enhanced progress bar */
+.progress-bar {
+    background: linear-gradient(90deg, var(--primary), var(--accent));
+    box-shadow: 0 0 10px rgba(var(--primary-rgb), 0.5);
+}
+
+/* Enhanced stats cards */
+.stat-card {
+    background: rgba(var(--primary-rgb), 0.1);
+    border: 1px solid var(--primary);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+    background: rgba(var(--primary-rgb), 0.2);
+    transform: scale(1.05);
+}
+
+/* Theme switcher */
+.theme-switcher {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    background: var(--bg-secondary);
+    border: 1px solid var(--primary);
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.theme-option {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.theme-option:hover {
+    transform: scale(1.2);
+    border-color: var(--text-primary);
+}
+
+.theme-option.active {
+    border-color: var(--text-primary);
+    box-shadow: 0 0 10px rgba(var(--primary-rgb), 0.5);
+}
+
+/* Color scheme specific styles */
+.cyberpunk-green .theme-option { background: linear-gradient(45deg, #10b981, #059669); }
+.ocean-blue .theme-option { background: linear-gradient(45deg, #06b6d4, #0891b2); }
+.sunset-orange .theme-option { background: linear-gradient(45deg, #f97316, #ea580c); }
+.purple-galaxy .theme-option { background: linear-gradient(45deg, #a855f7, #9333ea); }
+.fire-red .theme-option { background: linear-gradient(45deg, #ef4444, #dc2626); }
+.emerald-forest .theme-option { background: linear-gradient(45deg, #10b981, #059669); }
+.golden-sunset .theme-option { background: linear-gradient(45deg, #f59e0b, #d97706); }
+.neon-pink .theme-option { background: linear-gradient(45deg, #ec4899, #db2777); } 
